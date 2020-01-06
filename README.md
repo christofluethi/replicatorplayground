@@ -502,7 +502,7 @@ View topic in destination cluster
 kubectl -n operator exec -it client-console bash
 kafka-console-consumer --bootstrap-server $(cat /etc/destination-cluster-client-properties/destination-cluster-bootstrap)  --consumer.config /etc/destination-cluster-client-properties/destination-cluster-client.properties --topic stock-trades --property print.value=false --property print.key=true --property print.timestamp=true
 ```
-# Destroy everything
+## Destroy everything
 ```Bash
 make destroy-demo
 make gke-destroy-cluster
